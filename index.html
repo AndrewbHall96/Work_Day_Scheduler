@@ -17,65 +17,82 @@
   <header class="jumbotron">
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class="lead"></p>
-    <div id="clock">Time Should Show Here</div>
+    <div>
+      <p id="currentTime"></p>
+    </div>
   </header>
   <!-- Timeblocks go here -->
+  <!--created a container for each work hour-->
   <div class="container">
-    <section class="row">
-      <section id="9time" class="time-block col-lg-1">9am</section>
-      <textarea id="9-text" class="description col-lg-10"></textarea>
-      <button id="9btn" class="savebtn col-lg-1" <i class="far fa-save"></i></button>
-    </section>
-    <section class="row">
-      <section id="10time" class="time-block col-lg-1">10am</section>
-      <textarea id="10-text" class="description col-lg-10"></textarea>
-      <button id="10btn" class="savebtn col-lg-1" <i class="far fa-save"></i></button>
-    </section>
-    <section class="row">
-      <section id="11time" class="time-block col-lg-1">11am</section>
-      <textarea id="11-text" class="description col-lg-10"></textarea>
-      <button id="11btn" class="savebtn col-lg-1" <i class="far fa-save"></i></button>
-    </section>
-    <section class="row">
-      <section id="12time" class="time-block col-lg-1">12pm</section>
-      <textarea id="12-text" class="description col-lg-10"></textarea>
-      <button id="12btn" class="savebtn col-lg-1" <i class="far fa-save"></i></button>
-    </section>
-    <section class="row">
-      <section id="1time" class="time-block col-lg-1">1pm</section>
-      <textarea id="1-text" class="description col-lg-10"></textarea>
-      <button id="1btn" class="savebtn col-lg-1" <i class="far fa-save"></i></button>
-    </section>
-    <section class="row">
-      <section id="2time" class="time-block col-lg-1">2pm</section>
-      <textarea id="2-text" class="description col-lg-10"></textarea>
-      <button id="2btn" class="savebtn col-lg-1" <i class="far fa-save"></i></button>
-    </section>
-    <section class="row">
-      <section id="3time" class="time-block col-lg-1">3pm</section>
-      <textarea id="3-text" class="description col-lg-10"></textarea>
-      <button id="3btn" class="savebtn col-lg-1" <i class="far fa-save"></i></button>
-    </section>
-    <section class="row">
-      <section id="4time" class="time-block col-lg-1">4pm</section>
-      <textarea id="4-text" class="description col-lg-10"></textarea>
-      <button id="4btn" class="savebtn col-lg-1" <i class="far fa-save"></i></button>
-    </section>
-    <section class="row">
-      <section id="5time" class="time-block col-lg-1">5pm</section>
-      <textarea id="5-text" class="description col-lg-10"></textarea>
-      <button id="5btn" class="savebtn col-lg-1" <i class="far fa-save"></i></button>
-    </section>
-    <section class="row">
-      <section id="6time" class="time-block col-lg-1">6pm</section>
-      <textarea id="6-text" class="description col-lg-10"></textarea>
-      <button id="6btn" class="savebtn col-lg-1" <i class="far fa-save"></i></button>
-    </section>
+
+    <div class="row">
+      <div id="hour-9" class="time-block col-lg-1">9am</div>
+      <textarea id="nineText" class="description col-lg-10" placeholder="Schedule Event Here"></textarea>
+      <button id="nineBtn" class="savebtn col-lg-1">Save <i class="far fa-save"></i></button>
+    </div>
+
+    <div class="row">
+      <!--id="todo-text should be 10-text. Changed for experimentation.-->
+      <div id="hour-10" class="time-block col-lg-1">10am</div>
+      <textarea id="tenText" class="description col-lg-10" placeholder="Schedule Event Here"></textarea>
+      <button id="tenBtn" class="savebtn col-lg-1">Save <i class="far fa-save"></i></button>
+    </div>
+
+    <div class="row">
+      <div id="hour-11" class="time-block col-lg-1">11am</div>
+      <textarea id="elevenText" class="description col-lg-10" placeholder="Schedule Event Here"></textarea>
+      <button id="elevenBtn" class="savebtn col-lg-1">Save <i class="far fa-save"></i></button>
+    </div>
+
+    <div class="row">
+      <div id="hour-12" class="time-block col-lg-1">12pm</div>
+      <textarea id="twelveText" class="description col-lg-10" placeholder="Schedule Event Here"></textarea>
+      <button id="twelveBtn" class="savebtn col-lg-1">Save <i class="far fa-save"></i></button>
+    </div>
+
+    <div class="row">
+      <div id="hour-13" class="time-block col-lg-1">1pm</div>
+      <textarea id="oneText" class="description col-lg-10" placeholder="Schedule Event Here"></textarea>
+      <button id="oneBtn" class="savebtn col-lg-1">Save <i class="far fa-save"></i></button>
+    </div>
+
+    <div class="row">
+      <div id="hour-14" class="time-block col-lg-1">2pm</div>
+      <textarea id="twoText" class="description col-lg-10" placeholder="Schedule Event Here"></textarea>
+      <button id="twoBtn" class="savebtn col-lg-1">Save <i class="far fa-save"></i></button>
+    </div>
+
+    <div class="row">
+      <div id="hour-15" class="time-block col-lg-1">3pm</div>
+      <textarea id="threeText" class="description col-lg-10" placeholder="Schedule Event Here"></textarea>
+      <button id="threeBtn" class="savebtn col-lg-1">Save <i class="far fa-save"></i></button>
+    </div>
+
+    <div class="row">
+      <div id="hour-16" class="time-block col-lg-1">4pm</div>
+      <textarea id="fourText" class="description col-lg-10" placeholder="Schedule Event Here"></textarea>
+      <button id="fourBtn" class="savebtn col-lg-1">Save <i class="far fa-save"></i></button>
+    </div>
+
+    <div class="row">
+      <div id="hour-17" class="time-block col-lg-1">5pm</div>
+      <textarea id="fiveText" class="description col-lg-10" placeholder="Schedule Event Here"></textarea>
+      <button id="fiveBtn" class="savebtn col-lg-1">Save <i class="far fa-save"></i></button>
+    </div>
+
+    <div class="row">
+      <div id="hour-18" class="time-block col-lg-1">6pm</div>
+      <textarea id="sixText" class="description col-lg-10" placeholder="Schedule Event Here"></textarea>
+      <button id="sixBtn" class="savebtn col-lg-1">Save <i class="far fa-save"></i></button>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+   <script type="text/javascript" src="./Assets/js/script.js"></script>
+  <!--<script src="./script.js"></script>-->
 </body>
+
 
 </html>

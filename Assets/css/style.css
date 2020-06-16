@@ -14,6 +14,8 @@ textarea{
 }
 
 .jumbotron {
+  background-image: url(https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background: auto;
   text-align: center;
   background-color: transparent;
   color: black;
@@ -57,6 +59,9 @@ textarea{
   color: white;
 }
 
+button {
+  background-color: #8dd6e6;
+}
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
