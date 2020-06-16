@@ -48,7 +48,7 @@ $(document).ready(function () {
   //   msgDiv.setAttribute("class", type);
   // }
 
-
+//instead of accessing the id, I can create another class. Make it a number to represent the hour. 
   function hourUpdater() {
     var currentHour = moment().hours()
     $(".time-block").each(function () {
