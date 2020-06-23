@@ -5,9 +5,14 @@ $(document).ready(function () {
   //document.querySelectorAll(".savebtn");
 
   $(".savebtn").on("click", function () {
-    var textValue = $(this).siblings(".description").val()
-    var time = $(this).parent().attr("id")
-    localStorage.setItem(time, textValue)
+    var time = $(this).siblings(".time-block").attr("id"); // key
+    var textValue = $(this).siblings(".description").val(); // val
+
+    console.log("time:", time);
+    console.log("textValue:", textValue);
+
+    localStorage.setItem(time, textValue);
+    
     //saveBtn.addEventListener("click", function (event) {
     //event.preventDefault();
 
@@ -25,8 +30,8 @@ $(document).ready(function () {
     //   }
     //   console.log(calendar);
 
-    //   localStorage.setItem("calendar", JSON.stringify(calendar));
-    //   renderCalendarText();
+    // localStorage.setItem("calendar", JSON.stringify(calendar));
+    // renderCalendarText();
     // });
 
 
@@ -51,21 +56,36 @@ $(document).ready(function () {
 //instead of accessing the id, I can create another class. Make it a number to represent the hour. 
   function hourUpdater() {
     var currentHour = moment().hours()
+
+    // console.log($(".time-block"));
+
     $(".time-block").each(function () {
+      // console.log($(this)); // Results?
+
       var blockHour = parseInt($(this).attr("id").split("-")[1])
+
       if (blockHour < currentHour) {
-        $(this).addClass("past")
+        $(this).addClass("past");
+        $(this).siblings(".description").addClass("past");
       } else if (blockHour === currentHour) {
+        // time blocks
         $(this).removeClass("past")
         $(this).addClass("present")
 
+        // Written notes
+        $(this).siblings(".description").removeClass("past")
+        $(this).siblings(".description").addClass("present")
       } else {
         $(this).removeClass("past")
         $(this).removeClass("present")
         $(this).addClass("future")
+        
+        $(this).siblings(".description").removeClass("past")
+        $(this).siblings(".description").removeClass("present")
+        $(this).siblings(".description").addClass("future")
       }
+    });
 
-    })
   }
 
   hourUpdater()
@@ -81,7 +101,6 @@ $(document).ready(function () {
       return;
     }
 
-    $("#")
     // nineText.textContent = calendar.hour9;
     // tenText.textContent = calendar.hour10;
     // elevenText.textContent = calendar.hour11;
@@ -96,18 +115,14 @@ $(document).ready(function () {
 
   }
 
-  
-$("#hour-9 .description").val(localStorage.getItem("hour-9"))
-$("#hour-10 .description").val(localStorage.getItem("hour-10"))
-$("#hour-11 .description").val(localStorage.getItem("hour-11"))
-$("#hour-12 .description").val(localStorage.getItem("hour-12"))
-$("#hour-13 .description").val(localStorage.getItem("hour-13"))
-$("#hour-14 .description").val(localStorage.getItem("hour-14"))
-$("#hour-15 .description").val(localStorage.getItem("hour-15"))
-$("#hour-16 .description").val(localStorage.getItem("hour-16"))
-$("#hour-17 .description").val(localStorage.getItem("hour-17"))
-$("#hour-18 .description").val(localStorage.getItem("hour-18"))
-
+  $("#nineText").val(localStorage.getItem("hour-9"));
+  $("#tenText").val(localStorage.getItem("hour-10"));
+  $("#elevText").val(localStorage.getItem("hour-11"));
+  $("#twelveText").val(localStorage.getItem("hour-12"));
+  $("#oneText").val(localStorage.getItem("hour-13"));
+  $("#twoText").val(localStorage.getItem("hour-14"));
+  $("#threeText").val(localStorage.getItem("hour-15"));
+  $("#fourText").val(localStorage.getItem("hour-16"));
+  $("#fiveText").val(localStorage.getItem("hour-17"));
+  $("#sixText").val(localStorage.getItem("hour-18"));
 })
-
-

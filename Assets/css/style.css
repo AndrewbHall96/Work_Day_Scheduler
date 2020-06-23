@@ -14,15 +14,14 @@ textarea{
 }
 
 .jumbotron {
-  background-image: url(https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-image: url(/Assets/images/planner.jpg);
   background: auto;
   text-align: center;
-  background-color: transparent;
+  /* background-color: transparent; */
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
 }
-
 .description{
   white-space: pre-wrap;
 }
